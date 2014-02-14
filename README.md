@@ -1,4 +1,6 @@
+<p align="center">
 <img src="https://raw.github.com/pandanomic/SUREwalk_android/master/surewalk/src/main/res/drawable/surewalk_logo.png" alt="SUREwalk Logo" height="150" width="400"/>
+</p>
 
 [CHANGELOG](https://github.com/pandanomic/SUREwalk_android/blob/master/CHANGELOG.md)
 
