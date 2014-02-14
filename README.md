@@ -1,7 +1,11 @@
-SUREwalk Android App
-====================
+<p align="center">
+  <img src="https://raw.github.com/pandanomic/SUREwalk_android/master/surewalk/src/main/res/drawable/surewalk_logo.png" alt="SUREwalk Logo" height="200" width="530"/>
+</p>
 
-This is the source code for the SUREwalk Android App.
+<p align="center">
+  This is the source code for the SUREwalk Android App.
+</p>
+=================
 
 ### [CHANGELOG](https://github.com/pandanomic/SUREwalk_android/blob/master/CHANGELOG.md)
 
@@ -55,7 +59,7 @@ The crashlytics xml is auto-generated if you use it. If you'd rather not, simply
 
         The MIT License (MIT)
 
-        Copyright (c) [year] [fullname]
+        Copyright (c) 2014 SUREwalk
 
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
