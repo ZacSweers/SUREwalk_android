@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <string name="maps_api_key">key_goes_here</string>
+    <string name="parse_app_key">key_goes_here</string>
+    <string name="parse_client_key">key_goes_here</string>
+    <string name="ga_tracking_id">UA-xxxxxxxx-x</string>
+    <string name="crashlytics_api_key">key_goes_here</string>
+
+</resources>

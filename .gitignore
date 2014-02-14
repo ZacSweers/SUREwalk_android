@@ -75,6 +75,5 @@ proguard/
 *.sublime-*
 
 # Surewalk stuff
-private_strings.xml
 private.md
 com_crashlytics_export_strings.xml

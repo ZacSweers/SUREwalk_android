@@ -21,6 +21,8 @@ import org.utexas.surewalk.R;
 import org.utexas.surewalk.controllers.PreferenceHandler;
 import org.utexas.surewalk.fragments.DashboardFragment;
 
+import java.util.ArrayList;
+
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 
 
@@ -55,6 +57,12 @@ public class MainActivity extends SherlockFragmentActivity {
             mPrefs.setFirstRun();
             firstRunDialog();
         }
+
+        // Check if keys are real or our dummies
+        // may be worthwhile to comment this out during testing
+        if (!mPrefs.getKeyCheck()) {
+            checkKeys();
+        }
     }
 
     private void firstRunDialog() {
@@ -79,6 +87,55 @@ public class MainActivity extends SherlockFragmentActivity {
         alert.show();
     }
 
+    private void checkKeys() {
+        String maps = getResources().getString(R.string.maps_api_key);
+        String parseAppKey = getResources().getString(R.string.parse_app_key);
+        String parseClientKey = getResources().getString(R.string.parse_client_key);
+        String analytics = getResources().getString(R.string.ga_tracking_id);
+        String crashlytics = getResources().getString(R.string.crashlytics_api_key);
+
+        ArrayList<String> missing = new ArrayList<String>();
+
+        if (maps.equals("key_goes_here")) {
+            missing.add("Maps API Key");
+        }
+        if (parseAppKey.equals("key_goes_here")) {
+            missing.add("Parse app Key");
+        }
+        if (parseClientKey.equals("key_goes_here")) {
+            missing.add("Parse client Key");
+        }
+        if (crashlytics.equals("key_goes_here")) {
+            missing.add("Crashlytics Key");
+        }
+        if (analytics.equals("UA-xxxxxxxx-x")) {
+            missing.add("Analytics tracking ID");
+        }
+
+        if (missing.size() > 0) {
+            String messageKey = "It appears the following keys are missing:\n";
+            for (String s : missing) {
+                messageKey += "- " + s + "\n";
+            }
+            messageKey += "\nSome features might not work correctly.";
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Missing keys")
+                    .setMessage(messageKey)
+                    .setPositiveButton("Dismiss",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alert = alertDialogBuilder.create();
+            alert.show();
+            mPrefs.setKeyCheck(false);
+        } else {
+            mPrefs.setKeyCheck(true);
+        }
+
+    }
 
    @Override
    public boolean onCreateOptionsMenu(Menu menu) {
