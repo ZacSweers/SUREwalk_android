@@ -69,6 +69,16 @@
             android:minHeight="48dp"
             android:text="Enter Address"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/bt_start_searching_building"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/selectable_button_background"
+            android:minHeight="48dp"
+            android:text="Campus Building"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
     <ProgressBar

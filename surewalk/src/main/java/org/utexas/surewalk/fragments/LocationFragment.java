@@ -26,6 +26,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
@@ -64,6 +65,7 @@ public class LocationFragment extends SherlockFragment {
     public boolean mDone;
     private Button mGPSButton;
     private Button mAddressButton;
+    private Button mBuildingButton;
     private Button mRedoButton;
     private String mEnteredAddress;
     private String mAddressError;
@@ -100,6 +102,7 @@ public class LocationFragment extends SherlockFragment {
         mGPSButton = (Button) view.findViewById(R.id.bt_start_searching_GPS);
         mAddressButton = (Button) view.findViewById(R.id.bt_start_searching_address);
         mRedoButton = (Button) view.findViewById(R.id.bt_redo);
+        mBuildingButton = (Button) view.findViewById(R.id.bt_start_searching_building);
 
         setupListeners(view);
 
@@ -133,12 +136,18 @@ public class LocationFragment extends SherlockFragment {
             }
         });
 
+        mBuildingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Coming soon", Toast.LENGTH_SHORT).show();
+//                buildingSearch();
+            }
+        });
+
     }
 
     public void startLocating(){
 
-        //TODO: fix logic here. We should be waiting for them 
-        //to respond to the GPS dialog before doing other stuff
         toggleSearchingViews(true);
 
         //Initially check if GPS is on, offer to turn on if it's off
@@ -270,6 +279,10 @@ public class LocationFragment extends SherlockFragment {
         alert.show();
         address.requestFocus();
         address.selectAll();
+    }
+
+    public void buildingSearch() {
+
     }
 
     private void toggleSearchingViews(boolean on) {
