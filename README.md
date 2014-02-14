@@ -49,8 +49,6 @@ The crashlytics xml is auto-generated if you use it. If you'd rather not, simply
 (Private accounts information is in an untracked private.md file)
 
 ### License
-===========
-
         The MIT License (MIT)
 
         Copyright (c) 2014 SUREwalk
