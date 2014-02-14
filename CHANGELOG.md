@@ -1,4 +1,5 @@
 Changelog
 =========
 
-### To-do once we go public
+### 2/14/14
+- Initial public repo
