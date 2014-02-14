@@ -1,12 +1,6 @@
 <p align="center">
-  <img src="https://raw.github.com/pandanomic/SUREwalk_android/master/surewalk/src/main/res/drawable/surewalk_logo.png" alt="SUREwalk Logo" height="200" width="530"/>
+  <img src="https://raw.github.com/pandanomic/SUREwalk_android/master/surewalk/src/main/res/drawable/surewalk_logo.png" alt="SUREwalk Logo" height="150" width="400"/>
 </p>
-
-<p align="center">
-  This is the source code for the SUREwalk Android App.
-</p>
-=================
-
 ### [CHANGELOG](https://github.com/pandanomic/SUREwalk_android/blob/master/CHANGELOG.md)
 
 ### Members of the Android team include the following:
