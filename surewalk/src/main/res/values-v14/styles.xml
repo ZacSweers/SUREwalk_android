@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:windowBackground">@color/lightGray</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Apptheme</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Apptheme</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Apptheme</item>
+
+        <!-- Light.DarkActionBar specific -->
+
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_apptheme</item>
+        <item name="android:actionBarWidgetTheme">@style/Theme.Apptheme.Widget</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator.Apptheme</item>
+    </style>
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.utexas.surewalk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Basic permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- For location stuff -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- For Parse push notifications -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="org.utexas.surewalk.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="org.utexas.surewalk.permission.C2D_MESSAGE" />
+
+    <!-- Google Maps API stuff -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <permission
+        android:name="org.utexas.surewalk.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="org.utexas.surewalk.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Don't allow tablets -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <!-- Unnecessary with gradle, but leaving in for non-gradle builds -->
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name=".classes.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/surewalkicon"
+        android:label="@string/app_name"
+        android:logo="@drawable/surewalkbanner"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/maps_api_key" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RequestWalkActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="org.utexas.surewalk.activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="org.utexas.surewalk.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Register Parse push notifications via GCM -->
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="org.utexas.surewalk" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Register regular Parse push notifications -->
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Crashlytics doesn't allow string resources yet, so must be hardcoded -->
+        <!-- The zeros are a placeholder. We manually paste our actual key in here for signed builds -->
+        <meta-data android:name="com.crashlytics.ApiKey"
+            android:value="0000000000000000000000000000000000000000"/>
+
+        <!-- Once they do though, use this -->
+        <!--<meta-data android:name="com.crashlytics.ApiKey" -->
+            <!--android:value="@string/crashlytics_api_key"/>-->
+    </application>
+
+</manifest>

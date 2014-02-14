@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SUREwalk</string>
+    <string name="action_settings">Settings</string>
+    <string name="your_name_cannot_be_empty">Cannot be empty!</string>
+    <string name="invalid_name">Invalid</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="action_help">Help</string>
+
+    <string name="icon_request_walk">&#xf0c0;</string>
+    <string name="icon_call_surewalk">&#xf095;</string>
+    <string name="icon_safety_tips">&#xf0ca;</string>
+    <string name="icon_call_utpd">&#xf132;</string>
+
+
+    <string name="licenses">"&#8226; ActionBarSherlock
+
+Copyright 2012 Jake Wharton
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; Android Asynchronous Http Client
+
+Copyright James Smith
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; EditText Validator
+
+The MIT License (MIT)
+Copyright © 2012 Andrea Baccega - me@andreabaccega.com
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+&#8226; Google GSON
+
+Copyright 2008-2011 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; Google Play Services
+
+Copyright 2008-2011 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; Twitter4J
+
+Copyright 2007 Yusuke Yamamoto
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software Distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; ViewPagerIndicator
+
+Copyright 2012 Jake Wharton
+Copyright 2011 Patrik Åkerfeldt
+Copyright 2011 Francisco Figueiredo Jr.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; Parse
+
+Copyright 2014 Parse
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+&#8226; Joda-Time
+
+Copyright 2014 Joda-Time
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+</string>
+
+    <string name="safety_tips">"&#8226; If you must walk alone, stay in well-lit areas where there are other people around\n
+&#8226; If you feel unsafe anytime while walking, use a yellow emergency phone to immediately alert The University of Texas at Austin Police Department (UTPD)\n
+&#8226; You can call UTPD from this app on the previous screen\n
+&#8226; Always dial 911 in the event of an emergency"
+    </string>
+    <string name="about_one">SUREwalk is a student-run volunteer group that provides walks to and from campus to UT students, faculty, and staff.</string>
+    <string name="about_two">Volunteers are gathered from trusted organizations from around campus and include both males and females.</string>
+    <string name="about_three">Upon requesting a walk, two volunteers (male and female) will meet you at your current location and walk you to your destination.</string>
+    <string name="hours">Hours</string>
+    <string name="hours_specific">SUREwalk does not operate during the summer.</string>
+    <string name="hours_basic">SUREwalk is in service Monday through Thursday from 10 p.m. – 2 a.m. after the first two weeks of the fall and spring semesters.</string>
+
+</resources>

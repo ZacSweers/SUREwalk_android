@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/selectable_button_background"
+            android:minHeight="48dp"
+            android:text="Clear" />
+
+        <TableLayout
+            android:id="@+id/input_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_clear"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/subject">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="48dp" >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="Name"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <com.andreabaccega.widget.FormEditText
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:editTextFormName="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="First and last name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:selectAllOnFocus="true"
+                    editTextFormName:emptyErrorString="@string/your_name_cannot_be_empty"
+                    editTextFormName:testErrorString="@string/invalid_name"
+                    editTextFormName:testType="personFullName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp" >
+
+                <TextView
+                    android:id="@+id/tv_eid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="UT EID"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <com.andreabaccega.widget.FormEditText
+                    xmlns:editTextFormEID="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/et_eid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="              "
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:selectAllOnFocus="true"
+                    editTextFormEID:emptyErrorString="@string/your_name_cannot_be_empty"
+                    editTextFormEID:testErrorString="@string/invalid_name" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp" >
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="Phone"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <com.andreabaccega.widget.FormEditText
+                    xmlns:editTextFormEID="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/et_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="xxx-xxx-xxxx"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:selectAllOnFocus="true"
+                    editTextFormEID:emptyErrorString="@string/your_name_cannot_be_empty"
+                    editTextFormEID:testErrorString="@string/invalid_name"
+                    editTextFormEID:testType="phone" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp" >
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="Email"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <com.andreabaccega.widget.FormEditText
+                    xmlns:editTextFormEmail="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/et_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:selectAllOnFocus="true"
+                    android:hint="john@example.com"
+                    android:imeOptions="actionGo"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    editTextFormEmail:emptyErrorString="@string/your_name_cannot_be_empty"
+                    editTextFormEmail:testErrorString="@string/invalid_name"
+                    editTextFormEmail:testType="email" />
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,30 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:windowBackground">@color/lightGray</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Apptheme</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Apptheme</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Apptheme</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator.Apptheme</item>
+    </style>
+
+    <style name="CustomActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/tealBlue</item>
+        <item name="background">@color/tealBlue</item>
+        <item name="android:displayOptions">useLogo|showHome</item>
+        <item name="displayOptions">useLogo|showHome</item>
+    </style>
+
+    <style name="ButtonBar" parent="@android:style/ButtonBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="ButtonBarButton">
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+</resources>

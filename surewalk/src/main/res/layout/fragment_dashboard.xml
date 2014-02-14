@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/open_status_indicator_pb"/>
+
+        <TextView
+            android:id="@+id/et_open_status_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/niceGray"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" >
+
+        <View
+            android:id="@+id/dash_vertical_divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:id="@+id/dash_horizontal_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/request_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dash_horizontal_divider"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/dash_vertical_divider"
+            android:gravity="center"
+            android:text="\n\nRequest a SUREwalk"
+            android:textColor="@color/dashboard_button_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/contact_sure_walk_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dash_horizontal_divider"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/dash_vertical_divider"
+            android:gravity="center"
+            android:text="\n\nCall SUREwalk"
+            android:textColor="@color/dashboard_button_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/contact_utpd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/dash_horizontal_divider"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/dash_vertical_divider"
+            android:gravity="center"
+            android:text="\n\nCall UTPD"
+            android:textColor="@color/dashboard_button_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/safety_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/dash_horizontal_divider"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/dash_vertical_divider"
+            android:gravity="center"
+            android:text="\n\nSafety Tips"
+            android:textColor="@color/dashboard_button_color"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

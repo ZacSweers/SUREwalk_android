@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Personal Information">
+        <com.andreabaccega.widget.ValidatingEditTextPreference
+            xmlns:validatingEditText="http://schemas.android.com/apk/res-auto"
+            android:title="Name"
+            android:summary=""
+            android:defaultValue=""
+            android:key="name"
+            android:maxLines="1"
+            validatingEditText:emptyAllowed="false"
+            validatingEditText:testType="personFullName"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"/>
+
+        <com.andreabaccega.widget.ValidatingEditTextPreference
+            xmlns:validatingEditText="http://schemas.android.com/apk/res-auto"
+            android:title="UT EID"
+            android:summary=""
+            android:defaultValue=""
+            android:key="uteid"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            validatingEditText:emptyAllowed="false"
+            validatingEditText:emptyErrorString="The field must not be empty"
+            validatingEditText:testErrorString="Not a valid UT EID"
+            validatingEditText:customRegexp="^[A-Za-z]+[0-9]+$"
+            validatingEditText:testType="regexp"/>
+
+        <com.andreabaccega.widget.ValidatingEditTextPreference
+            xmlns:validatingEditText="http://schemas.android.com/apk/res-auto"
+            android:title="Phone Number"
+            android:summary=""
+            android:defaultValue=""
+            android:key="phone"
+            android:phoneNumber="true"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            validatingEditText:emptyAllowed="false"
+            validatingEditText:testType="phone"/>
+
+        <com.andreabaccega.widget.ValidatingEditTextPreference
+            xmlns:validatingEditText="http://schemas.android.com/apk/res-auto"
+            android:title="Email"
+            android:summary=""
+            android:defaultValue=""
+            android:key="email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            validatingEditText:emptyAllowed="false"
+            validatingEditText:testType="email"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Privacy">
+
+        <Preference
+            android:summary="Help us help you! No personal or identifying information will be sent."
+            android:selectable="false"/>
+        <CheckBoxPreference
+            android:title="Auto-send crash reports"
+            android:defaultValue="true"
+            android:key="crashreports" />
+        <CheckBoxPreference
+            android:title="Google Analytics"
+            android:defaultValue="true"
+            android:key="analytics" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About" >
+        <Preference
+            android:title="About SUREwalk"
+            android:key="about" />
+        <Preference
+            android:title="Licenses"
+            android:key="licenses" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Social" >
+        <Preference
+            android:title="Follow us on Twitter!"
+            android:icon="@drawable/ic_action_twitter"
+            android:key="twitter" />
+        <Preference
+            android:title="Like us on Facebook!"
+            android:icon="@drawable/ic_action_facebook"
+            android:key="facebook"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

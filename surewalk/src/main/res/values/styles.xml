@@ -1,0 +1,74 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:windowBackground">@color/lightGray</item>
+        <item name="actionBarItemBackground">@drawable/selectable_background_apptheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Apptheme</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Apptheme</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Apptheme</item>
+        <item name="actionBarWidgetTheme">@style/Theme.Apptheme.Widget</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator.Apptheme</item>
+    </style>
+
+    <style name="CustomActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/tealBlue</item>
+        <item name="background">@color/tealBlue</item>
+        <item name="displayOptions">useLogo|showHome</item>
+    </style>
+
+    <style name="Widget.TabPageIndicator.Apptheme" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/tab_indicator_ab_apptheme</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/niceGray</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Apptheme" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_apptheme</item>
+        <item name="progressBarStyle">@style/ProgressBar.Apptheme</item>
+    </style>
+
+    <style name="PopupMenu.Apptheme" parent="@style/Widget.Sherlock.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_apptheme</item>
+    </style>
+
+    <style name="DropDownListView.Apptheme" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_apptheme</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Apptheme" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_apptheme</item>
+    </style>
+
+    <style name="DropDownNav.Apptheme" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_apptheme</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_apptheme</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_apptheme</item>
+    </style>
+
+    <style name="ProgressBar.Apptheme" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_apptheme</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Apptheme.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Apptheme</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
+    </style>
+
+    <style name="StyledIndicators" parent="AppTheme">
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
+    </style>
+
+    <style name="ButtonBar" parent="@android:style/ButtonBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="ButtonBarButton">
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+</resources>

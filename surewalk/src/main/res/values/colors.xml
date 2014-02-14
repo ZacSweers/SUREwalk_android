@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="burntOrange">#CC5500</color>
+    <color name="secondaryGray">#D6D2C4</color>
+    <color name="lightGray">#E6E6E6</color>
+    <color name="lightOrange">#F8851B</color>
+    <color name="lightGreen">#64B45A</color>
+    <color name="lightRed">#FF6347</color>
+    <color name="mediumGray">#D3D7DA</color>
+
+    <!-- New colors per UTSG's request -->
+    <color name="limeGreen">#C2C009</color>
+    <color name="offWhite">#F8FEFD</color>
+    <color name="tealBlue">#0F7183</color>
+    <color name="niceGray">#434B4E</color>
+    <color name="purpleish">#586784</color>
+</resources>

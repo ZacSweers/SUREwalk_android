@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="fill_parent"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/about_us_cover"
+                android:layout_gravity="center"
+                android:src="@drawable/surewalk_logo"
+                android:scaleType="centerCrop"
+                android:paddingRight="32dp"
+                android:paddingLeft="32dp"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/purpleish"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/mediumGray"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:id="@+id/about_surewalk"
+                    android:layout_gravity="left"
+                    android:textColor="#777"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/subject">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:text="@string/about_one"
+                        android:id="@+id/about_one"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#d3d7d9"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:text="@string/about_two"
+                        android:id="@+id/about_two"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#d3d7d9"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:text="@string/about_three"
+                        android:id="@+id/about_three"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:id="@+id/hours"
+                    android:layout_gravity="left"
+                    android:textColor="#777"
+                    android:textStyle="italic"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/subject">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:text="@string/hours_basic"
+                        android:id="@+id/hours_basic"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#d3d7d9"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:text="@string/hours_specific"
+                        android:id="@+id/hours_specific"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
