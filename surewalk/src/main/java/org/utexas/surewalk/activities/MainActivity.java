@@ -39,15 +39,18 @@ public class MainActivity extends SherlockFragmentActivity {
             Crashlytics.start(this);
         }
 
+        // Set up our views
         setContentView(R.layout.activity_main);
         getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.surewalkbanner));
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        // Set up our fragments. In this case we just have one: DashboardFragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container,  DashboardFragment.newInstance("Home"));
         }
 
+        // If it's their first time running the app, show a dialog to set up info
         if (!mPrefs.getFirstRun()) {
             mPrefs.setFirstRun();
             firstRunDialog();
