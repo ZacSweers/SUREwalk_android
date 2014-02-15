@@ -11,7 +11,7 @@
 * [Sam Thompson](https://github.com/st028)
 
 ### About
-In the summer of 2013, a member of UT Student Government approached the Computer Science majors' Facebook group asking if anyone would be interested in helping them develop mobile apps for SUREwalk. SUREwalk is student-run, volunteer service where students can call at late hours of the night to have two volunteers come out and walk with them to wherever they need to go. SUREwalk wanted to increase improve their accessibility to students (before you just had to call them). We were more than happy to help with this cause.
+In the summer of 2013, a member of UT Student Government approached the Computer Science majors' Facebook group asking if anyone would be interested in helping them develop mobile apps for SUREwalk. SUREwalk is student-run, volunteer service where students can call at late hours of the night to have two volunteers come out and walk with them to wherever they need to go. SUREwalk wanted to improve their accessibility to students (before you just had to call them). We were more than happy to help with this cause.
 
 Along with the Android side, other students also developed an iOS app and a website built with Rails, with all three platforms sharing a unified back end via Parse. If they opt to release that source code, we will post links here. 
 
