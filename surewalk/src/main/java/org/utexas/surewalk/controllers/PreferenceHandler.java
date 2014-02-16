@@ -82,6 +82,16 @@ public class PreferenceHandler {
         return mPrefs.getBoolean("crashreports", false);
     }
 
+    public void setKeyCheck(boolean val) {
+        SharedPreferences.Editor prefEdit = mPrefs.edit();
+        prefEdit.putBoolean("keycheck", val);
+        prefEdit.commit();
+    }
+
+    public boolean getKeyCheck() {
+        return mPrefs.getBoolean("keycheck", false);
+    }
+
 //    public String[] getInfo() {
 //        String[] s = [mPrefs.getString("name", ""), mPrefs.getString("uteid", ""), mPrefs.getString("phone", "")];
 //        return new String[]{mPrefs.getString("name", ""), mPrefs.getString("uteid", ""), mPrefs.getString("phone", "")};
