@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SUREwalk</string>
+    <string name="app_name">SUREWalk</string>
     <string name="action_settings">Settings</string>
     <string name="your_name_cannot_be_empty">Cannot be empty!</string>
     <string name="invalid_name">Invalid</string>

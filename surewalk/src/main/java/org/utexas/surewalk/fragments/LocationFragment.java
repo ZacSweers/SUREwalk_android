@@ -133,6 +133,7 @@ public class LocationFragment extends SherlockFragment {
             public void onClick(View v) {
                 resetAllViews();
                 mDone = false;
+                ((OnFragmentReadyListener) getActivity()).onFragmentReady(false);
             }
         });
 
@@ -438,7 +439,7 @@ public class LocationFragment extends SherlockFragment {
                     double distance = haversine(30.28768, -97.74039, Double.parseDouble(mLat),
                             Double.parseDouble(mLon));
 
-                    if (distance > 1.5) {
+                    if (distance > 3.0) {
 
                         // Not an address in range
                         mLon = null;

@@ -131,7 +131,7 @@ public class RequestMapFragment extends SupportMapFragment {
 
                 double distance = haversine(30.28768, -97.74039, point.latitude, point.longitude);
 
-                if (distance > 1.5) {
+                if (distance > 3.0) {
                     Toast.makeText(getActivity(), "Out of range", Toast.LENGTH_SHORT).show();
                     return;
                 }

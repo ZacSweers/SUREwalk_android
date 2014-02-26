@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
@@ -95,22 +94,6 @@ public class SettingsActivity extends SherlockPreferenceActivity implements Pref
             });
             AlertDialog dialog = b.create();
             dialog.show();
-        } else if (pref.getKey().equals("twitter")) {
-
-            // Adapted slightly from here: http://stackoverflow.com/a/18695465/3034339
-            if (checkTwitterInstall()) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=texassurewalk")));
-            } else {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/texassurewalk")));
-            }
-        } else if (pref.getKey().equals("facebook")) {
-
-            // Adapted slightly from here: http://stackoverflow.com/a/10213314/3034339
-            if(checkFBInstall()) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/116169851775344")));
-            } else {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/116169851775344")));
-            }
         }
 
         if (pref instanceof CheckBoxPreference) {
