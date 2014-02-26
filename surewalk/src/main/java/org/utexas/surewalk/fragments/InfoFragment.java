@@ -23,6 +23,7 @@ import org.utexas.surewalk.R;
 import org.utexas.surewalk.classes.OnFragmentReadyListener;
 import org.utexas.surewalk.controllers.PreferenceHandler;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InfoFragment extends SherlockFragment {
@@ -116,9 +117,20 @@ public class InfoFragment extends SherlockFragment {
     private boolean fragReady() {
         return !(et_name.getText().toString().length() == 0
                 || et_eid.getText().toString().length() == 0
-                || et_phone.getText().toString().length() == 0
+                || (et_phone.getText().toString().length() == 0 && isTenNumbers(et_phone.getText().toString()))
                 || et_email.getText().toString().length() == 0);
 
+    }
+
+    // Not sure this is working correctly with the textlistener
+    private boolean isTenNumbers(String s) {
+        Pattern p = Pattern.compile("\\d"); // "\d" is for digits in regex
+        Matcher m = p.matcher(s);
+        int count = 0;
+        while(m.find()){
+            count++;
+        }
+        return (count == 10);
     }
 
 

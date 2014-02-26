@@ -86,7 +86,7 @@ public class RequestWalkActivity extends SherlockFragmentActivity implements OnF
                             String[] info = ((InfoFragment) mAdapter.getItem(0)).getInfo();
                             walkRequest.setName(info[0]);
                             walkRequest.setUTEID(info[1]);
-                            walkRequest.setPhoneNumber(info[2]);
+                            walkRequest.setPhoneNumber(info[2].replaceAll("[\\D]", ""));
                             walkRequest.setEmail(info[3]);
                             pager.setCurrentItem(1, true);
                             v.setEnabled(false);

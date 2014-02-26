@@ -28,7 +28,7 @@
                 android:paddingLeft="32dp"
                 android:background="@android:color/white"/>
 
-            <TextView
+            <View
                 android:layout_width="fill_parent"
                 android:layout_height="2dp"
                 android:background="@color/purpleish"
@@ -70,7 +70,7 @@
                         android:layout_gravity="center"
                         android:singleLine="false"
                         android:fontFamily="sans-serif-light"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textColor="#222"
                         />
 
@@ -90,7 +90,7 @@
                         android:layout_gravity="center"
                         android:singleLine="false"
                         android:fontFamily="sans-serif-light"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textColor="#222"
                         />
 
@@ -110,7 +110,7 @@
                         android:layout_gravity="center"
                         android:singleLine="false"
                         android:fontFamily="sans-serif-light"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textColor="#222"
                         />
 
@@ -165,9 +165,134 @@
                         android:layout_gravity="center"
                         android:singleLine="false"
                         android:fontFamily="sans-serif-light"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textColor="#222"
                         />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dev"
+                    android:id="@+id/social"
+                    android:layout_gravity="left"
+                    android:textColor="#777"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/subject">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selectable_about"
+                        android:id="@+id/about_source"
+                        android:text="This app is open source! Click here to view."
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:singleLine="false"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
+                        android:textColor="#222"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social"
+                    android:id="@+id/social"
+                    android:layout_gravity="left"
+                    android:textColor="#777"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/subject">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="onClick"
+                        android:clickable="true"
+                        android:id="@+id/social_fb"
+                        android:background="@drawable/selectable_about">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_action_facebook"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:text="Like us on Facebook!"
+                            android:padding="16dp"
+                            android:layout_gravity="center"
+                            android:singleLine="false"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:textColor="#222"
+                            />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#d3d7d9"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="onClick"
+                        android:clickable="true"
+                        android:id="@+id/social_twitter"
+                        android:background="@drawable/selectable_about">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_action_twitter"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="center_vertical|right"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:text="Follow us on Twitter!"
+                            android:padding="16dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:singleLine="false"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"
+                            android:textColor="#222"
+                        />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

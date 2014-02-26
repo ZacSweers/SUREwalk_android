@@ -80,15 +80,4 @@
             android:key="licenses" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Social" >
-        <Preference
-            android:title="Follow us on Twitter!"
-            android:icon="@drawable/ic_action_twitter"
-            android:key="twitter" />
-        <Preference
-            android:title="Like us on Facebook!"
-            android:icon="@drawable/ic_action_facebook"
-            android:key="facebook"/>
-    </PreferenceCategory>
-
 </PreferenceScreen>
