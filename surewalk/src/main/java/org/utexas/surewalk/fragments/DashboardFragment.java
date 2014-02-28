@@ -42,7 +42,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 public class DashboardFragment extends SherlockFragment {	
 
     private CalendarClient cc = new CalendarClient();
-//    protected boolean isOpen = true;
+    private boolean isOpen = false;
     private static Typeface mFont;
     private static final String FONTAWESOME = "fontawesome-webfont.ttf";
     
@@ -105,11 +105,13 @@ public class DashboardFragment extends SherlockFragment {
 			
 			@Override
 			public void onClick(View v) {
-                if (isNetworkAvailable()) {
+                if (!isNetworkAvailable()) {
+                    Toast.makeText(getActivity(), "Please connect to the internet first!", Toast.LENGTH_LONG).show();
+                } else if (!isOpen) {
+                    Toast.makeText(getActivity(), "SUREwalk isn't open right now :(", Toast.LENGTH_LONG).show();
+                } else {
                     Intent i = new Intent(getActivity(), RequestWalkActivity.class);
                     startActivity(i);
-                } else {
-                    Toast.makeText(getActivity(), "Please connect to the internet first!", Toast.LENGTH_LONG).show();
                 }
 
 			}
@@ -238,7 +240,7 @@ public class DashboardFragment extends SherlockFragment {
 
                     DateTime now = new DateTime();
 
-					boolean isOpen = status.toLowerCase(Locale.US).contains("open");
+					isOpen = status.toLowerCase(Locale.US).contains("open");
                     boolean isCurrent = false;
 
                     // If the current date/time isn't in the range of the open hours, then assume closed
