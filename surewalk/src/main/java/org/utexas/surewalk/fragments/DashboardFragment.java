@@ -48,7 +48,9 @@ public class DashboardFragment extends SherlockFragment {
     
 	private static final String SURE_NUMBER = "512-232-9255";
     private static final String UTPD_NUMBER = "512-471-4441";
-    
+
+
+    private String calendarResponse;
     private View rootView;
 
     public static DashboardFragment newInstance(String title) {
@@ -240,44 +242,49 @@ public class DashboardFragment extends SherlockFragment {
 
                     DateTime now = new DateTime();
 
-					isOpen = status.toLowerCase(Locale.US).contains("open");
-                    boolean isCurrent = false;
+                    //fresh load or status has changed, either way show a new Crouton
+                    if(!(status + details).equals(calendarResponse)) {
+                        calendarResponse = status + details;
+                        isOpen = status.toLowerCase(Locale.US).contains("open");
+                        boolean isCurrent = false;
 
-                    // If the current date/time isn't in the range of the open hours, then assume closed
-                    if (!(now.compareTo(start) >= 0 && now.compareTo(end) <= 0)) {
-                        isOpen = false;
-                    } else {
-                        isCurrent = true;
-                    }
+                        // If the current date/time isn't in the range of the open hours, then assume closed
+                        if (!(now.compareTo(start) >= 0 && now.compareTo(end) <= 0)) {
+                            isOpen = false;
+                        } else {
+                            isCurrent = true;
+                        }
 
-					ProgressBar pb = (ProgressBar) rootView.findViewById(R.id.open_status_progress);
-					pb.setVisibility(View.GONE);
+                        ProgressBar pb = (ProgressBar) rootView.findViewById(R.id.open_status_progress);
+                        pb.setVisibility(View.GONE);
 
-                    TextView tv2 = (TextView) rootView.findViewById(R.id.et_open_status_details);
+                        TextView tv2 = (TextView) rootView.findViewById(R.id.et_open_status_details);
 
-                    Crouton.makeText(getActivity(),
-                            "SUREwalk is " + (isOpen ? "OPEN" : "CLOSED"),
-                            new Style.Builder()
-                                    .setTextSize(22)
-                                    .setBackgroundColor((isOpen ? R.color.lightGreen : R.color.lightRed))
-                                    .build(),
-                            (ViewGroup) tv2.getParent())
-                            .setConfiguration(new Configuration.Builder()
-                                    .setDuration(Configuration.DURATION_INFINITE)
-                                    .build())
-                            .setOnClickListener(new OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    updateCalendar();
-                                }
-                            })
-                            .show();
+                        Crouton.clearCroutonsForActivity(getActivity());
+                        Crouton.makeText(getActivity(),
+                                "SUREwalk is " + (isOpen ? "OPEN" : "CLOSED"),
+                                new Style.Builder()
+                                        .setTextSize(22)
+                                        .setBackgroundColor((isOpen ? R.color.lightGreen : R.color.lightRed))
+                                        .build(),
+                                (ViewGroup) tv2.getParent())
+                                .setConfiguration(new Configuration.Builder()
+                                        .setDuration(Configuration.DURATION_INFINITE)
+                                        .build())
+                                .setOnClickListener(new OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        updateCalendar();
+                                    }
+                                })
+                                .show();
 
-                    // Only show details textview if there are any details to display
-                    if (details.length() > 0 && isCurrent) {
-                        tv2.setVisibility(View.VISIBLE);
-                        tv2.setText(details);
-                        tv2.setSelected(true);
+                        // Only show details textview if there are any details to display
+                        if (details.length() > 0 && isCurrent) {
+                            tv2.setVisibility(View.VISIBLE);
+                            tv2.setText(details);
+                            tv2.setSelected(true);
+                        }
                     }
 				}
 			});
