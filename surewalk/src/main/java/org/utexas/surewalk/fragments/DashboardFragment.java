@@ -194,7 +194,6 @@ public class DashboardFragment extends SherlockFragment {
     public void onResume() {
         super.onResume();
         updateCalendar();
-        
     }
 
     public Typeface getTypeface(Context context, String typeface) {
@@ -256,7 +255,7 @@ public class DashboardFragment extends SherlockFragment {
                         }
 
                         ProgressBar pb = (ProgressBar) rootView.findViewById(R.id.open_status_progress);
-                        pb.setVisibility(View.GONE);
+                        pb.setVisibility(View.INVISIBLE);
 
                         TextView tv2 = (TextView) rootView.findViewById(R.id.et_open_status_details);
 
@@ -267,7 +266,7 @@ public class DashboardFragment extends SherlockFragment {
                                         .setTextSize(22)
                                         .setBackgroundColor((isOpen ? R.color.lightGreen : R.color.lightRed))
                                         .build(),
-                                (ViewGroup) tv2.getParent())
+                                (ViewGroup) rootView.findViewById(R.id.dashboard_root))
                                 .setConfiguration(new Configuration.Builder()
                                         .setDuration(Configuration.DURATION_INFINITE)
                                         .build())
