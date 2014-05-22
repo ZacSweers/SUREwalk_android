@@ -9,6 +9,7 @@
 * [Chris Roberts](https://github.com/NASAgeek)
 * [Henri Sweers](http://pandanomic.github.io)
 * [Sam Thompson](https://github.com/st028)
+
 Please note: commit history was not retained when transferring this repository to protect api keys.
 
 ### About
