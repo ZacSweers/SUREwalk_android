@@ -9,6 +9,7 @@
 * [Chris Roberts](https://github.com/NASAgeek)
 * [Henri Sweers](http://pandanomic.github.io)
 * [Sam Thompson](https://github.com/st028)
+Please note: commit history was not retained when transferring this repository to protect api keys.
 
 ### About
 In the summer of 2013, a member of UT Student Government approached the Computer Science majors' Facebook group asking if anyone would be interested in helping them develop mobile apps for SUREwalk. SUREwalk is student-run, volunteer service where students can call at late hours of the night to have two volunteers come out and walk with them to wherever they need to go. SUREwalk wanted to improve their accessibility to students (before you just had to call them). We were more than happy to help with this cause.
