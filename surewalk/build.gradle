@@ -5,7 +5,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.8.0+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
         classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
     }
 }
@@ -21,7 +21,7 @@ repositories {
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.1'
+    buildToolsVersion '19.1.0'
 
     defaultConfig {
         minSdkVersion 10
@@ -47,7 +47,7 @@ dependencies {
 
     // Maven
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
-	compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
     compile 'com.andreabaccega:android-form-edittext:1.0.3'
     compile 'com.google.android.gms:play-services:4.0.30'
     compile('de.keyboardsurfer.android.widget:crouton:1.8.3') {
@@ -58,7 +58,7 @@ dependencies {
 
     // Jars
     compile 'com.google.android.gms:play-services:4.1.32'
-	compile 'com.google.maps.android:android-maps-utils:0.2+'
+    compile 'com.google.maps.android:android-maps-utils:0.2+'
     compile files('libs/android-async-http-1.4.4.jar')
     compile files('libs/Parse-1.4.0/Parse-1.4.0.jar')
     compile files('libs/GSON/gson-2.2.4.jar')
